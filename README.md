@@ -3,19 +3,19 @@
 
 ## 代码框架
 
-![image-20220712195011852](.\img\structure.png)
+![project structure](./img/structure.png)
 
 ## 代码执行流程
 
-由于本项目是在Colab上运行的，因此主训练文件——main.ipynb和代码注释文件annotation.ipynb是ipynb格式文件，将代码放入Google Cloud Drive后需要将部分注释内容解注，代码中有说明。
+由于本项目是在Colab上运行的，因此主训练文件——main.ipynb和代码注释文件annotation.ipynb是ipynb格式文件，**将代码放入Google Cloud Drive后需要将部分注释内容解注**，代码中有说明。
 
 ### 训练
 
-本项目有CodeBERT/CodeT5两种模型类型可供训练选择，在Config.py中修改model_type即可切换到对应model，打开main.ipynb，全部运行即可按照默认配置进行训练/验证/测试（默认3个epoch，学习率5e-5，beam_size10...更多参见Config.py），运行期间最新的模型/ppl最低的模型/bleu最高的模型均会被保存在output/$model_type/文件夹中，方便进行生成任务。
+本项目有CodeBERT/CodeT5两种模型类型可供训练选择，在Config.py中修改model_type即可切换到对应model，**打开main.ipynb，点击全部运行**即可按照默认配置进行训练/验证/测试（默认3个epoch，学习率5e-5，beam_size10...更多参见Config.py），运行期间最新的模型/ppl最低的模型/bleu最高的模型均会被保存在output/$model_type/文件夹中，方便进行生成任务。
 
 ### 代码注释生成
 
-本项目的代码注释生成写在了另一个ipynb中——annotation.ipynb，里面有我本次项目的13个函数作为数据，用于生成注释，其中此ipynb默认使用了CodeT5模型，且需要从外界加载模型（本项目如果在Colab上运行代码中直接wget了官方二号检查点作为模型，需解注），其中可以调整generate时的参数来得到较好的结果。
+本项目的代码注释生成写在了另一个ipynb中——annotation.ipynb，里面有我本次项目的13个函数作为数据，用于生成注释，其中此ipynb默认使用了CodeT5模型，且需要从外界加载模型（本项目如果在Colab上运行代码中直接wget了官方二号检查点作为模型，需解注），其中可以调整generate时的参数来得到较好的结果。**同样全部运行即可**
 
 ## 参考链接
 
