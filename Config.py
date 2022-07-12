@@ -32,15 +32,13 @@ class config:
 
     # train args
     epoch               = 3
-    num_train_epochs    = 3
     learning_rate       = 5e-5
     beam_size           = 10
     weight_decay        = 0.0
     adam_epsilon        = 1e-8
-    max_grad_norm       = 1.0
     warmup_steps        = 0
 
     # other
     n_gpu = 1
-    seed = 42
+    seed = 2022
     
