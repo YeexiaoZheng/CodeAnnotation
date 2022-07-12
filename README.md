@@ -3,7 +3,7 @@
 
 ## 代码框架
 
-![image-20220712195011852](D:\0-GitHub\CodeAnnotation\img\structure.png)
+![image-20220712195011852](.\img\structure.png)
 
 ## 代码执行流程
 
