@@ -9,6 +9,8 @@
 
 由于本项目是在Colab上运行的，因此主训练文件——main.ipynb和代码注释文件annotation.ipynb是ipynb格式文件，**将代码放入Google Cloud Drive后需要将部分注释内容解注**，代码中有说明。
 
+由于在本地测试代码时Hugging Face Datasets加载较慢且容易报错，因此本项目的数据集是下载来存储在data文件夹内的。
+
 ### 训练
 
 本项目有CodeBERT/CodeT5两种模型类型可供训练选择，在Config.py中修改model_type即可切换到对应model，**打开main.ipynb，点击全部运行**即可按照默认配置进行训练/验证/测试（默认3个epoch，学习率5e-5，beam_size10...更多参见Config.py），运行期间最新的模型/ppl最低的模型/bleu最高的模型均会被保存在output/$model_type/文件夹中，方便进行生成任务。
